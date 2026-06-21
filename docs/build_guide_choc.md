@@ -47,7 +47,7 @@ The following is needed to build the keyboard:
 
 - **58 diodes 1N4148W**. Surface mount diodes in SOD123 package. Pick any common variation. I used `1N4148WTR` (Digi-Key 1655-1360-1-ND).
 
-- **2 TRRS connectors**. The same type which is used for Corne, Lily58 etc. Technically even TRS should work if you stick to the default serial communication.
+- **2 TRRS connectors PJ-320A**. The same type which is used for Corne, Lily58 etc. Technically even TRS should work if you stick to the default serial communication.
 
 - **2 buttons** momentary, tactile, through-hole, 2 pins, I used one for DIP switches, 3x6x4.3mm. Technically optional: you can use metal tweezers whenever you need to reset the microcontroller.
 
@@ -292,7 +292,7 @@ The default layout for the Sofle Choc is in the QMK fork and demonstrates some L
 [springpinheader]: <https://yushakobo.jp/shop/a01mc-00/> "Spring pin headers - Japanese"
 [qmkprotonc]: https://qmk.fm/proton-c/ "QMK Proton-C"
 [promicrosocketing]: <https://docs.splitkb.com/hc/en-us/articles/360011263059> "How do I socket a microcontroller? by splitkb.com"
-[qmkintro]: <https://beta.docs.qmk.fm/newbs/newbs_getting_started> "QMK getting started"
+[qmkintro]: <https://docs.qmk.fm/#/newbs_getting_started> "QMK getting started"
 [qmkhandedness]: <https://docs.qmk.fm/#/feature_split_keyboard?id=setting-handedness> "QMK firmware - setting handedness"
 [manufacturingproblems]: https://josef-adamcik.cz/electronics/corne-keyboard-build-log.html#manufacturing-at-jlcpcb---update-27112019 "Possible problems when manufacturing top plate for Corne"
 [nooledlag]: https://github.com/qmk/qmk_firmware/issues/7522 "No OLED lag bug"
