@@ -5,7 +5,7 @@ title: Sofle Keyboard - build guide (Wireless)
 
 ![Keyboard](images/build_guide_wireless/sofle_wireless_final.jpg)
 
-The Sofle V2.Wireless is a variation of the Sofle with:
+The Sofle V2.0 Wireless is a variation of the Sofle with:
 
 - Support for both MX and Kailh Choc sockets/switches
     * Returned from the V1 boards!
@@ -22,7 +22,7 @@ The Sofle V2.Wireless is a variation of the Sofle with:
 - Opinionated Gerber sides
     * Panels over reversible boards
 - No TR(R)S jacks
-    * Peripheral board always communicates over BT to main board
+    * The two halves communicate over Bluetooth rather than TR(R)S
 
 The boards are compatible with V2 top-plates, bottom plate, and cases with the following caveats:
 
@@ -31,7 +31,7 @@ The boards are compatible with V2 top-plates, bottom plate, and cases with the f
 - You PROBABLY need access to the power switch, so cases that block the PCB under the microcontroller will be tricky
 - The Reset button moved ~10mm lower on the board to allow for the Nice hardware/power switch/etc.
 
-The Sofle V2.Wireless was designed by [Garrett Faucher], based on the timeless Sofle V2 by [Josef Adamčík].
+The Sofle V2.0 Wireless was designed by [Garrett Faucher], based on the timeless Sofle V2 by [Josef Adamčík].
 
 # Bill Of Materials
 
@@ -55,8 +55,8 @@ The following is needed to build the board:
 
 - **58x Key Caps** Again, make sure the caps match your switches. Two (thumb) caps should be `1.5u`, the rest `1u`
 
-- **60x diodes 1N4148W**. Surface mount diodes in SOD123 package. Pick any common variation. I used `1N4148WTR` (Digi-Key 1655-1360-1-ND). Voltage specifications and specifics don't seem to matter for low-voltage keyboards
-    - _Note_: Other build guides indicate only 58 diodes are "Necessary" - Don't do that to yourself - get an encoder with click.
+- **58-60x diodes 1N4148W**. Surface mount diodes in SOD123 package. Pick any common variation. I used `1N4148WTR` (Digi-Key 1655-1360-1-ND).
+    - _Note_: Other build guides indicate only 58 diodes are "Necessary" due to an encoder with a clicking action being optional.
 
 - **2x Buttons**  momentary, tactile, through-hole, 2 pins, I used one for DIP switches, 3x6x4.3mm. Technically optional: you can use metal tweezers whenever you need to reset the microcontroller.
 
@@ -80,7 +80,7 @@ The following is needed to build the board:
     * **2x Display Covers** The original design works fine!
 
 - **Rotary Encoder**/s
-    * **2x Rotary Encoders** (EC11) If you are not sure take EC11E. Some other variants (EC11K) may have some additional plastic pins for and require mounting holes for them which are not included on the PCB. Perfer short shaft.
+    * **2x Rotary Encoders** (EC11) If you are not sure take EC11E. Some other variants (EC11K) may have some additional plastic pins for and require mounting holes for them which are not included on the PCB. Prefer short shaft.
     * **2x Matching Knobs** for each encoder. Make sure the knob matches the encoder’s shaft diameter, depth and shape.
 
 # Tools and Materials
@@ -148,7 +148,7 @@ For the bases, I've made [Base Plate and Case] options.
 
 ## Step 1: Solder Diodes
 
-The Sofle V2.Wireless gerber files are a _panels_, and not reversible. That said, the silkscreen DOES have diode markers on both sides for testing, so be sure you're working on the side that **also** has socket silk screens.
+The Sofle V2.0 Wireless gerber files come as a _panel_, and not reversible. That said, the silkscreen DOES have diode markers on both sides for testing, so be sure you're working on the side that **also** has socket silk screens.
 
 The other build guides go over the basics of Diode attachment, but I have a piece of advice.
 
@@ -174,7 +174,7 @@ There's no great way of testing the sockets at this point - Wait until after **S
 
 ## Step 3: Solder JST Socket
 
-You have a choice two choices to make:
+You have two choices to make:
 - JST position: _Top_ or _Bottom_ of plate
 - JST orientation: _Parallel (laying down)_ or _Perpendicular (Standing up)_
 
@@ -192,12 +192,11 @@ This is also a great time to break out the _masking tape_ - position the JST Soc
 
 ### Testing
 
-Test continuity between the JST **pin** and the through-hole on the other side of the board
-0
+Test continuity between the JST **pin** and the through-hole on the other side of the board.
 
 ## Step 4: Solder Power Switch
 
-If you put the JST on the bottom, then this is you first component on the "Top" of the PCB!
+If you put the JST on the bottom, then this is your first component on the "Top" of the PCB!
 
 ![Power Switch](images/build_guide_wireless/power_switch.jpg)
 
@@ -277,15 +276,15 @@ Only real difference here is, if you're putting the battery on the bottom, plug 
 
 ## Step 12
 
-Legit same as every other guide.
+Standard Sofle V2 steps
 
 ## Step 13
 
-Don't look so surprised
+Standard Sofle V2 steps
 
 ## Step 14
 
-FINALLY
+Standard Sofle V2 steps
 
 # Firmware and Programming
 
@@ -332,8 +331,8 @@ See the Sofle [build guide].
 [Switch Plate]: https://www.thingiverse.com/thing:5167225
 [mauC]: https://www.thingiverse.com/mauC/designs
 [Base Plate and Case]: https://www.thingiverse.com/thing:7375852
-[Flare576/zmk-config]: [https://github.com/Flare576/zmk-config]
-[Flare576/sofle]: [https://github.com/Flare576/sofle]
+[Flare576/zmk-config]: https://github.com/Flare576/zmk-config
+[SoFlare]: https://github.com/Flare576/sofle
 [build guide]: <{{ site.baseurl }}/build_guide.html> "Sofle V1/V2 build guide"
 [soflelayout]: http://www.keyboard-layout-editor.com/#/gists/76efb423a46cbbea75465cb468eef7ff "Sofle Keyboard layout at keyboard-layout-editor.com"
 [soflegithub]: https://github.com/josefadamcik/SofleKeyboard "SofleKeyboard - KiCad project on Github.com"
